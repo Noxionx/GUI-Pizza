@@ -27,12 +27,10 @@
     <!-- Side menu -->
     <md-sidenav  ng-controller="sidenavCtrl" 
                             data-ng-include=" 'partials/sidenav.html' "
-                            layout="column" style="overflow: hidden; display: flex;" 
-                            class="md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open" 
+                            layout="column"
+                            class="md-sidenav-left md-whiteframe-z2" 
                             md-component-id="left" 
-                            md-is-locked-open="$media('md')" 
-                            tabindex="-1" 
-                            md-theme-watch="true">
+                            md-is-locked-open="$media('gt-md')">
     </md-sidenav>
 <div layout="column" layout-fill tabindex="-1" role="main">
     <!-- Top bar -->
