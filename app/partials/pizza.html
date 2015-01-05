@@ -1,6 +1,18 @@
-<div ng-repeat="pizza in pizzas">
+<div class="description" ng-repeat="pizza in pizzas">
+	<span class="name">{{pizza.name}}</span> - <span class="prix">Prix = 20.00 €</span></br>
 	Ingredient : 
-	<span ng-repeat="ingredients in pizza.ingredients">
+	<span class="ingredient"><span ng-repeat="ingredients in pizza.ingredients">
 	{{ingredients}}
-	</span>
+	</span></span><br/>
+	<span  class="pate">
+	    <select ng-model="typePate" ng-options="type.name for type in types">
+	      <option value="">-- Type de pâte --</option>
+	    </select>
+  	</span>
+  	<span  class="nbpers">
+	    <select ng-model="nbPers" ng-options="personne.nb for personne in nbpersonnes">
+	      <option value="">-- Nombre de personnes--</option>
+	    </select>
+  	</span>
+  	<md-button class="md-raised md-warn">Ajouter au panier</md-button></br>
 </div>

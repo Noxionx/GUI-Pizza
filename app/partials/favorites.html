@@ -1,2 +1,22 @@
-
-        <div>TODO misc</div>
+<div class="total">
+	Total = 60.00 € <md-button class="md-raised md-warn">Ajouter toute ma sélection au panier</md-button>
+</div>
+<div class="description" ng-repeat="pizza in pizzas">
+	{{pizza.name}} - <span class="prix">Prix = 20.00 €</span></br>
+	Ingredient : 
+	<span class="ingredient" ng-repeat="ingredients in pizza.ingredients">
+	{{ingredients}}
+	</span><br/>
+	<span  class="pate">
+	    <select ng-model="typePate" ng-options="type.name for type in types">
+	      <option value="">-- Type de pâte --</option>
+	    </select>
+  	</span>
+  	<span  class="nbpers">
+	    <select ng-model="nbPers" ng-options="personne.nb for personne in nbpersonnes">
+	      <option value="">-- Nombre de personnes--</option>
+	    </select>
+  	</span>
+  	<md-button class="md-raised md-warn">Modifier</md-button>
+  	<md-button class="md-raised md-warn">Ajouter au panier</md-button>
+</div>
