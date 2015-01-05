@@ -6,10 +6,9 @@ define(["angular",
     "controllers/sidenavCtrl",
     "controllers/homeCtrl",
     
-    "controllers/studiesCtrl",
-    "controllers/worksCtrl",
-    "controllers/skillsCtrl",
-    "controllers/miscCtrl"
+    "controllers/contactCtrl",
+    "controllers/favCtrl",
+    "controllers/pizzaCtrl"
 ],function(){
     
     'use strict';
@@ -19,52 +18,27 @@ define(["angular",
       "common.localization",
       "controllers"
     ]).controller("appCtrl",["$scope", "$location", function($scope, $location){
-                    $scope.theme = "grey";
-                    $scope.$watch(
-                        function() { return $location.path();},
-                        function(newValue, oldValue) {
-                          if ( newValue !== oldValue ) {
-                            $scope.changeTheme(newValue);
-                          }
-                        }
-                      );
-              $scope.changeTheme = function(path){
-                  switch(path){
-                                case '/' : $scope.theme = "grey";
-                                                        break;
-                                case '/studies' : $scope.theme = "blue";
-                                                        break;
-                                case '/works' : $scope.theme = "green";
-                                                        break;
-                                case '/skills' : $scope.theme = "orange";
-                                                        break;
-                                case '/misc' : $scope.theme = "red";
-                                                        break;
-                            }
-              };
-              $scope.changeTheme($location.path());
+                    $scope.theme = "red";
+                    
     }]).config(['$routeProvider', function($routeProvider) {
             $routeProvider
                     .when('/', {
 			templateUrl: 'partials/home.html',
 			controller : 'homeCtrl'
 		})
-                    .when('/studies', {
-			templateUrl: 'partials/studies.html',
-			controller : 'studiesCtrl'
+                    .when('/fav', {
+			templateUrl: 'partials/favorites.html',
+			controller : 'favCtrl'
 		}) 
-                    .when('/works', {
-			templateUrl: 'partials/works.html',
-			controller : 'worksCtrl'
+                    .when('/pizza', {
+			templateUrl: 'partials/pizza.html',
+			controller : 'pizzaCtrl'
 		})
-                    .when('/skills', {
-			templateUrl: 'partials/skills.html',
-			controller : 'skillsCtrl'
+                    .when('/contact', {
+			templateUrl: 'partials/contact.html',
+			controller : 'contactCtrl'
 		})
-                    .when('/misc', {
-			templateUrl: 'partials/misc.html',
-			controller : 'miscCtrl'
-		});
+
     }]);
 });
 
