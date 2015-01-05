@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="fr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="fr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="fr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr"> <!--<![endif]-->
+<head>
+  <title>Nox's web CV</title>
+  <meta name="description" content="">
+     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+     <style type="text/css">
+         @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}
+     </style>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/blue-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/green-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/orange-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/red-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/grey-theme.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+    
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="bower_components/material-design-icons/sprites/css-sprite/sprite-action-white.css">
+    
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body ng-controller="appCtrl" layout="row" md-theme="{{theme}}">
+    <!-- Side menu -->
+    <md-sidenav  ng-controller="sidenavCtrl" 
+                            data-ng-include=" 'partials/sidenav.html' "
+                            layout="column" style="overflow: hidden; display: flex;" 
+                            class="md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open" 
+                            md-component-id="left" 
+                            md-is-locked-open="$media('md')" 
+                            tabindex="-1" 
+                            md-theme-watch="true">
+    </md-sidenav>
+<div layout="column" layout-fill tabindex="-1" role="main">
+    <!-- Top bar -->
+    <md-toolbar ng-controller="headerCtrl" data-ng-include=" 'partials/header.html' " md-theme-watch="true"></md-toolbar>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+<md-content ng-view md-scroll-y="" flex="" md-theme-watch="true"><div class="doc-content ng-scope"></div>
+  </md-content>
+</div>
+
+  
+
+  <script src="bower_components/hammerjs/hammer.min.js"></script>
+  <script src="bower_components/requirejs/require.js" data-main="js/main"></script>
+</body>
+</html>
