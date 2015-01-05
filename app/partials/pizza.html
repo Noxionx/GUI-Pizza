@@ -1,2 +1,6 @@
-
-        <div>TODO skills</div>
+<div ng-repeat="pizza in pizzas">
+	Ingredient : 
+	<span ng-repeat="ingredients in pizza.ingredients">
+	{{ingredients}}
+	</span>
+</div>
