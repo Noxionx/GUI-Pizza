@@ -125,7 +125,27 @@
 }
 
 .name{
-  font-size: 20px;
+  font-size: 1.5em;
   font: bold;
-  padding-right: 50px;
+  padding-right: 500px;
+}
+.prix{
+}
+.contact{
+  font-size: 3em;
+  margin : 0.5em;
+}
+.mail{
+  margin-left: 5%;
+  font-size: 1.5em;
+}
+.phone{
+   margin-left: 5%;
+   font-size: 1.5em;
+}
+.total{
+  margin: 2%;
+}
+.homebutton{
+  margin: 2%;
 }

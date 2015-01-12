@@ -9,7 +9,13 @@ define(["angular", "angular-material", "angular-route", "./controllers"],functio
 
         {"name":"Bolognaise","ingredients":["tomate","champignon","lardon","mozzarella"]},
 
-        {"name":"Marocco","ingredients":["tomate","champignon","lardon","mozzarella"]}
+        {"name":"Reine","ingredients":["tomate","champignon","lardon","mozzarella"]},
+
+        {"name":"Orientale","ingredients":["tomate","champignon","lardon","mozzarella"]},
+
+        {"name":"Forestière","ingredients":["tomate","champignon","lardon","mozzarella"]},
+
+        {"name":"Indienne","ingredients":["tomate","champignon","lardon","mozzarella"]}
     		];
     	$scope.types = [
 	      {name:'épaisse'},
