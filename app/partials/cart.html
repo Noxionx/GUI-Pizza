@@ -1,0 +1,24 @@
+<div class="description" ng-repeat="pizza in cart.items">
+	<span class="name">{{pizza.name}}</span> <span class="prix">Prix = {{pizza.price}} €</span></br>
+	Ingredient : 
+	<span class="ingredient" ng-repeat="ingredients in pizza.ingredients">
+	{{ingredients}}
+	</span><br/>
+	<span>
+	    Pâte : fine
+  	</span>
+  	<span>
+	    &nbsp;&nbsp;&nbsp;&nbsp;2 pers.&nbsp;&nbsp;
+  	</span>
+  	<span>
+	    &nbsp;&nbsp;&nbsp;&nbsp;Quantité : {{pizza.quantity}}&nbsp;&nbsp;
+  	</span>
+  	<md-button class="md-raised md-warn" ng-click="removeFromCart(pizza)">Retirer du panier</md-button>
+</div>
+<div class="total">
+	<strong>Total = {{cart.total}} € </strong>
+</div>
+&nbsp;&nbsp;&nbsp;
+<md-button class="md-raised md-warn" href="#pizza">Ajouter d'autre pizzas</md-button>
+&nbsp;&nbsp;&nbsp;
+<md-button class="md-raised md-warn">Commander</md-button>

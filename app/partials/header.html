@@ -1,8 +1,12 @@
 
 <div class="md-toolbar-tools" flex layout="column">
-    {{currentPage}}
+    {{currentPage | headerfilter}}
     <div flex></div>
     <section layout="row" layout-align="right">
+
+            <md-button ng-click="showLogView($event)" ng-hide="logged" class="md-raised md-info">Connexion</md-button>
+            <md-button ng-click="logout()" ng-hide="!logged" class="md-raised md-info">Se déconnecter</md-button>
+            &nbsp;&nbsp;&nbsp;
             <md-button ng-click="showInfos($event)" class="md-fab"  aria-label="Info">
                     <md-icon icon="bower_components/material-design-icons/action/svg/production/ic_info_outline_24px.svg" style="width: 24px; height: 40px;"></md-icon>
                 </md-button>

@@ -1,5 +1,22 @@
 define(["angular", "angular-material", "angular-route", "./controllers"],function(){
-    angular.module("controllers").controller("headerCtrl",["$scope", "$location", "$mdDialog", function($scope, $location, $mdDialog){
+    angular.module("controllers").filter("headerfilter",function() {
+    return function(input) {
+      var text = input;
+      switch(input){
+        case "/" : text = "Accueil"
+                  break
+        case "/pizza" : text = "Liste des pizza"
+                  break
+        case "/cart" : text = "Mon pannier"
+                  break
+        case "/contact" : text = "Contact"
+                  break
+        case "/fav" : text = "Mes pizza favorites"
+                  break
+      }
+      return text;
+    };
+  }).controller("headerCtrl",["$scope", "$location", "$mdDialog", function($scope, $location, $mdDialog){
            $scope.currentPage=$location.path(); 
            $scope.$watch(
                 function() { return $location.path();},
@@ -22,4 +39,5 @@ define(["angular", "angular-material", "angular-route", "./controllers"],functio
               $mdDialog.hide();
             };
         }
+
 });

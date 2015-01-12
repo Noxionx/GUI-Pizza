@@ -1,8 +1,8 @@
 <div class="total">
-	Total = 60.00 € <md-button class="md-raised md-warn">Ajouter toute ma sélection au panier</md-button>
+	<strong>Total = {{cart.total}} €</strong> <md-button class="md-raised md-warn" ng-click="addAllToCart()">Ajouter toute ma sélection au panier</md-button>
 </div>
 <div class="description" ng-repeat="pizza in pizzas">
-	<span class="name">{{pizza.name}}</span> <span class="prix">Prix = 20.00 €</span></br>
+	<span class="name">{{pizza.name}}</span> <span class="prix">Prix = {{pizza.price}} €</span></br>
 	Ingredient : 
 	<span class="ingredient" ng-repeat="ingredients in pizza.ingredients">
 	{{ingredients}}
@@ -18,5 +18,5 @@
 	    </select>
   	</span>
   	<md-button class="md-raised md-warn">Modifier</md-button>
-  	<md-button class="md-raised md-warn">Ajouter au panier</md-button>
+  	<md-button class="md-raised md-warn" ng-click="addToCart(pizza)">Ajouter au panier</md-button>
 </div>

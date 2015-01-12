@@ -6,11 +6,21 @@
           <div layout="column">
             <md-button id="home" href="#/" class="menu-item menu-title md-menu-item" data-i18n="Accueil">
             </md-button>
-              <md-button id="favorites" href="#/fav" class="menu-item menu-title md-menu-item" data-i18n="Mes pizza favorites">
+              <md-button id="favorites" ng-hide="!logged" href="#/fav" class="menu-item menu-title md-menu-item" data-i18n="Mes pizza favorites">
             </md-button>
               <md-button id="pizza" href="#/pizza" class="menu-item menu-title md-menu-item" data-i18n="Nos Pizza">
             </md-button>
             <md-button id="contact" href="#/contact" class="menu-item menu-title md-menu-item" data-i18n="Contact">
             </md-button>
           </div>
-</md-content>
+          <md-card>
+            <h3>Mon panier :</h3>
+            <div ng-repeat="item in cart.items">
+               - {{item.name}} : {{item.price}} € x {{item.quantity}}
+            </div>
+            <strong>Total : {{cart.total}} €</strong>
+            <br><br/>
+            <md-button id="seeCart" href="#/cart" class="md-raised md-themed md-primary">Voir mon panier</md-button>
+          </md-card>
+      </md-content>
+

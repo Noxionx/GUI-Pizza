@@ -1,5 +1,5 @@
 <div class="description" ng-repeat="pizza in pizzas">
-	<span class="name">{{pizza.name}}</span> <span class="prix">Prix = 20.00 €</span></br>
+	<span class="name">{{pizza.name}}</span> <span class="prix">Prix = {{pizza.price}} €</span></br>
 	Ingredient : 
 	<span class="ingredient"><span ng-repeat="ingredients in pizza.ingredients">
 	{{ingredients}}
@@ -14,5 +14,5 @@
 	      <option value="">-- Nombre de personnes--</option>
 	    </select>
   	</span>
-  	<md-button class="md-raised md-warn">Ajouter au panier</md-button></br>
+  	<md-button class="md-raised md-warn" ng-click="addToCart(pizza)">Ajouter au panier</md-button></br>
 </div>

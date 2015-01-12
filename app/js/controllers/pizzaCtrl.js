@@ -1,21 +1,21 @@
 define(["angular", "angular-material", "angular-route", "./controllers"],function(){
     angular.module("controllers").controller("pizzaCtrl",["$scope", function($scope){
     	$scope.pizzas = [
-    		{"name":"Royale","ingredients":["tomate","champignon","lardon","mozzarella"]},
+    		{"name":"Royale","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 8.99},
 
-    		{"name":"Savoyarde","ingredients":["tomate","champignon","lardon","mozzarella"]},
+    		{"name":"Savoyarde","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 11.99},
 
-    		{"name":"4 formage","ingredients":["tomate","champignon","lardon","mozzarella"]},
+    		{"name":"4 formage","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 9.49},
+    		
+    		{"name":"Bolognaise","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 8.99},
 
-        {"name":"Bolognaise","ingredients":["tomate","champignon","lardon","mozzarella"]},
+        {"name":"Reine","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 10.49},
 
-        {"name":"Reine","ingredients":["tomate","champignon","lardon","mozzarella"]},
+        {"name":"Orientale","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 12.99},
 
-        {"name":"Orientale","ingredients":["tomate","champignon","lardon","mozzarella"]},
+        {"name":"Forestière","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 11.80},
 
-        {"name":"Forestière","ingredients":["tomate","champignon","lardon","mozzarella"]},
-
-        {"name":"Indienne","ingredients":["tomate","champignon","lardon","mozzarella"]}
+        {"name":"Indienne","ingredients":["tomate","champignon","lardon","mozzarella"], "price": 7.50}
     		];
     	$scope.types = [
 	      {name:'épaisse'},
